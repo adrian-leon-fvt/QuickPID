@@ -1,12 +1,14 @@
-# QuickPID   [![arduino-library-badge](https://www.ardu-badge.com/badge/QuickPID.svg?)](https://www.ardu-badge.com/QuickPID) [![PlatformIO Registry](https://badges.registry.platformio.org/packages/dlloydev/library/QuickPID.svg)](https://registry.platformio.org/packages/libraries/dlloydev/QuickPID)
+# QuickPID
+
+Fork of Dlloydev/QuickPID to use with basic C++ so it can be associated with different platforms.
 
 QuickPID is an updated implementation of the Arduino PID library with additional features for PID control. By default, this implementation closely follows the method of processing the p,i,d terms as in the PID_v1 library except for using a more advanced anti-windup mode. Integral anti-windup can be based on conditionally using PI terms to provide some integral correction, prevent deep saturation and reduce overshoot. Anti-windup can also be based on clamping only, or it can be turned completely off. Also, the proportional term can be based on error, measurement, or both. The derivative term can be based on error or measurement.  PID controller modes include timer, which allows external timer or ISR timing control.
 
 ### Features
 
-Development began with a fork of the Arduino PID Library. Modifications and new features have been added as described in the [releases](https://github.com/Dlloydev/QuickPID/releases).
+It is meant to serve as a base class for application-specific PID controllers. 
 
-#### New feature Summary
+#### Feature Summary inherited from the forked repo. 
 
 - [x] New functions added: `SetProportionalMode`, `SetDerivativeMode` and `SetAntiWindupMode`
 - [x] `timer` mode for calling PID compute by an external timer function or ISR
@@ -98,6 +100,6 @@ void SetAntiWindupMode(iAwMode iAwMode);        // Set iTerm anti-windup to iAwC
 
 ### Autotuner
 
-#### Get  [sTune](https://github.com/Dlloydev/sTune)   [![arduino-library-badge](https://www.ardu-badge.com/badge/sTune.svg?)](https://www.ardu-badge.com/sTune)  [![PlatformIO Registry](https://badges.registry.platformio.org/packages/dlloydev/library/sTune.svg)](https://registry.platformio.org/packages/libraries/dlloydev/sTune)
+#### Get  [sTune](https://github.com/Dlloydev/sTune)
 
 A very fast autotuner capable of on-the-fly tunings and more.
